@@ -1,0 +1,435 @@
+/* --- TUS ESTILOS GENERALES Y COMPONENTES EXISTENTES --- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background: rgb(97, 68, 68);
+}
+
+.hover-efecto {
+  transition: all 0.4s ease-in-out;
+}
+
+.hover-efecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(253, 126, 20, 0.25) !important;
+}
+
+/* HERO */
+.hero-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  color: #f8f9fa;
+  font-size: 1.3rem;
+}
+
+.btn-donaciones {
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 14px 40px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+  min-height: 56px;
+  transition: all 0.3s ease;
+}
+
+.btn-donaciones:hover {
+  background-color: #cc5e00 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(253, 126, 20, 0.4);
+}
+
+.img-panda {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.4s ease;
+}
+
+.img-panda:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 900px) {
+  .hero {
+    min-height: 90dvh;
+  }
+  .img-panda {
+    height: 380px;
+  }
+}
+
+/* CARRUSEL */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 70px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 4rem !important;
+  height: 4rem !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fd7e14'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+  transition: all 0.2s ease;
+}
+
+.carousel-control-prev-icon {
+  transform: rotate(180deg) !important;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon {
+  transform: rotate(180deg) scale(1.15) !important;
+  filter: brightness(1.2) !important;
+}
+
+.carousel-control-next:hover .carousel-control-next-icon {
+  transform: scale(1.15);
+  filter: brightness(1.2) !important;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 45vw;
+  max-height: 600px;
+  min-height: 280px;
+  transition: transform 0.5s ease;
+}
+
+.hover-efecto:hover .carousel-item.active img {
+  transform: scale(1.05);
+}
+
+/* ACORDEÓN */
+.accordion-button {
+  font-size: 1.1rem;
+  padding: 18px 20px;
+  min-height: 60px;
+}
+
+.acc-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+.accordion-button i.fa-fw {
+  margin-right: 10px;
+  color: #fd7e14;
+}
+
+.accordion-collapse {
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #fd7e14 !important;
+  background-color: rgba(253, 126, 20, 0.15) !important;
+}
+
+.accordion-button:focus {
+  border-color: #fd7e14 !important;
+  box-shadow: 0 0 0 0.25rem rgba(253, 126, 20, 0.25) !important;
+}
+
+.accordion-button:hover {
+  background-color: rgba(253, 126, 20, 0.1) !important;
+  color: #cc5e00 !important;
+}
+
+/* PESTAÑAS (PILLS) */
+.custom-pills .nav-link {
+  color: #fd7e14 !important;
+  background-color: white !important;
+  border: 2px solid #fd7e14 !important;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 10px 22px;
+  margin-right: 8px;
+  border-radius: 8px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-pills .nav-link.active {
+  color: white !important;
+  background-color: #fd7e14 !important;
+}
+
+.custom-pills .nav-link i {
+  margin-right: 6px;
+}
+
+/* CARDS DE INFO */
+.info-card {
+  background-color: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  border-radius: 10px !important;
+  color: #333 !important;
+  height: 100%;
+}
+
+.info-card .card-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-right: 6px;
+}
+
+/* ANIMACIONES */
+.accordion-body,
+.tab-pane.active .pills-animado {
+  opacity: 0;
+  animation: fadeInContent 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInContent {
+  to {
+    opacity: 1;
+  }
+}
+
+#inicio,
+#quienes-somos,
+#seccion-imagenes,
+#seccion-caracteristicas,
+#seccion-donacion {
+  scroll-margin-top: 95px;
+}
+
+.box-donacion {
+  max-width: 650px;
+}
+
+
+/* --- ESTILOS DEL COMPONENTE FOOTER --- */
+.site-footer {
+  background-color: #fd7e14; /* Sincronizado con el color 'bg-danger' de tu web */
+  color: #ffffff;
+  padding: 50px 0 20px 0;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+.contact-info li i {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Botón Hazte Socio */
+.btn-socio {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.btn-socio:hover {
+  background-color: #ffffff;
+  color: #fd7e14;
+  text-decoration: none;
+}
+
+/* Redes Sociales */
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  background-color: #ffffff;
+  color: #fd7e14;
+}
+
+/* Formulario de suscripción */
+.newsletter-form {
+  display: flex;
+  max-width: 280px;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid #ffffff;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+  padding: 0 15px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.newsletter-form button:hover {
+  background-color: #f8f9fa;
+}
+
+/* Barra inferior del footer */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin-top: 20px;
+  padding-top: 25px;
+}
+
+.bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  font-size: 13px;
+}
+
+.bottom-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.bottom-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .bottom-container {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .bottom-links a {
+    margin: 0 10px;
+  }
+}
+
+
+/* --- BOTÓN FLECHA SUBIR (SCROLL TOP) --- */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 52px;
+  height: 52px;
+  background-color: #fd7e14; /* naranja del tema Quartz, combina con el navbar */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  z-index: 1000; /* Por encima del navbar */
+  opacity: 0;
+  visibility: hidden; /* Oculto inicialmente */
+  transform: scale(0.8);
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+/* Cuando la clase .show está presente (visible) */
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Hover efecto */
+.scroll-to-top:hover {
+  background-color: #cc5e00;
+  transform: scale(1.08);
+  color: white;
+}
+
+
+
