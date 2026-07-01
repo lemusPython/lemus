@@ -3,9 +3,9 @@ const floatingBtn = document.createElement('button');
 floatingBtn.innerHTML = `
   <img src="https://media.istockphoto.com/id/466087002/es/foto/panda-rojo-del-%C3%A1rbol.jpg?b=1&s=612x612&w=0&k=20&c=eK8G9zPMv_E6_SJbS5zhhp5dsPL6KTj6guCo-1EN9g4="
        style="
-         width: 50%;
-         height: 50%;
-         border-radius: 100%;
+         width: 100%;
+         height: 100%;
+         border-radius: 120%;
          object-fit: cover;
        ">
 `;
