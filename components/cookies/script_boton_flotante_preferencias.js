@@ -5,7 +5,7 @@ floatingBtn.innerHTML = `
        style="
          width: 100%;
          height: 100%;
-         border-radius: 120%;
+         border-radius: 70%;
          object-fit: cover;
        ">
 `;
